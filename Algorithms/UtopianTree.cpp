@@ -8,15 +8,34 @@ Its height is 1 meter. Can you find the height of the tree after N growth cycles
 #include <iostream>
 using namespace std;
 
-int height(int n) {
-    return 0;
+int height(int n) 
+{   
+    int h=1;
+    if(n==0)
+        return h;
+    else
+        {
+        for(int i=1;i<=n;i++)
+            {
+            h=h*2;
+            i++;
+            if(i<=n)
+                h=h+1;
+           // i++;
+            
+        }
+        return h;
+    }
 }
 int main() {
     int T;
     cin >> T;
-    while (T--) {
+    for (int i=1;i<=T;i++) 
+    {
         int n;
         cin >> n;
         cout << height(n) << endl;
     }
+    return 0;
 }
+
